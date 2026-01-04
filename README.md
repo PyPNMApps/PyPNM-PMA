@@ -27,9 +27,20 @@ PyPNM-PMA is a Python toolkit for building Profile Management Applications (PMAs
 To get started with PyPNM-PMA, follow these steps:
 
 1. **Clone the Repository**:
-   
-   ```bash
-   git clone https://github.com/yourusername/PyPNM-PMA.git
-    cd PyPNM-PMA
+
+  ```bash
+  git clone https://github.com/yourusername/PyPNM-PMA.git
+  cd PyPNM-PMA
   ```
 
+2. **Install Dependencies**:
+
+  ```bash
+  ./install.sh
+  ```
+
+3. **Activate the Virtual Environment**:
+  
+  ```bash
+  source .env/bin/activate
+  ```  
