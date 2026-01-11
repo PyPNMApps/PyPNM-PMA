@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2026 Maurice Garcia
+
+site_name: DOCSIS OFDM Profile Effectiveness Simulator
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Design: design.md

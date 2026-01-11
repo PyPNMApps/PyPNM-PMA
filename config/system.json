@@ -1,0 +1,7 @@
+{
+  "SimulatorDefaults": {
+    "seed": 51966,
+    "payload_bytes": 2048,
+    "symbols": 4
+  }
+}
