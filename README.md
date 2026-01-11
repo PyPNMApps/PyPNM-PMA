@@ -24,11 +24,40 @@ The OFDM/OFDMA simulation capability is one tool within the PyPNM-PMA toolkit. I
 
 ## Features
 
+- **OFDM/OFDMA Profile Designer**
+  - Provide a standardized **profile schema** to build an OFDM or OFDMA profile from a template.
+  - Support importing a profile read from a CMTS and mapping it into the same schema for editing and validation.
+  - Expose a Python class-based API to construct, normalize, validate, and serialize profile definitions.
+  - Run the designed/edited profile through the simulator to score:
+    - spectral efficiency (**bits-per-Hz** proxy)
+    - robustness vs an RxMER distribution (**RxMER profile**)
+    - performance under selectable impairment models
+
 - **Profile Design**: Build candidate OFDM/OFDMA profiles (bit-loading strategies up to 16KQAM) with validation and guardrails.
 - **Profile Evaluation**: Score and compare profiles against RxMER distributions and impairment models using consistent KPIs (e.g., BER/FER, margin, robustness).
 - **RxMER And Impairment Ingestion**: Normalize and analyze RxMER and related telemetry from simulated sources and real measurements.
 - **Simulation Toolkit (One Component)**: OFDM/OFDMA PHY simulation modules used for controlled evaluation of profile behavior under noise and impairment scenarios.
 - **Extensible Architecture**: Designed to accommodate CMTS/vendor integration layers and additional impairment models over time.
+
+## How The Designer Fits The Workflow
+
+1. **Create Or Import A Profile**
+(1) Start from a standardized schema template, or  
+(2) Read an existing profile from the CMTS and map it into the schema.
+
+2. **Edit And Validate**
+Apply edits to modulation orders, tone masks, and any guardrails, then validate the schema for correctness and completeness.
+
+3. **Simulate And Score**
+Run the profile through the simulation pipeline using:
+- a target RxMER distribution (per-tone or aggregate)
+- selected impairment models
+
+4. **Report Performance**
+Produce decision-ready outputs such as:
+- bits-per-Hz proxy and throughput-relative comparisons
+- FER/BER versus RxMER curves and threshold crossings
+- robustness and margin estimates across modem percentiles (if modeled)
 
 ## Getting Started
 

@@ -297,5 +297,3 @@ PyPNM-PMA should produce a self-contained set of artifacts per SG cycle:
 3. Generate a conservative and balanced profile candidate per SG.
 4. Implement analytic scoring and output artifacts.
 5. Add ChannelSimulator validation for top candidates and confidence scoring.
-
-
